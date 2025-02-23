@@ -288,27 +288,29 @@
         .article-box {
             position: relative;
             overflow: hidden;
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 3 / 4;
             border-radius: 10px;
-            background-color: #222;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #f8f8f8;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border: 2px solid #ccc;
         }
 
         .article-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .article-box img {
             width: 100%;
-            height: 70%;
+            height: 65%;
             object-fit: cover;
+            border-bottom: 2px solid #ccc;
         }
 
         .article-info {
@@ -316,17 +318,21 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 10px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+            padding: 12px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+            border-radius: 0 0 8px 8px;
         }
 
         .article-title {
             font-size: 1.2rem;
             font-weight: bold;
+            border-bottom: 1px solid #bbb;
+            padding-bottom: 5px;
         }
 
         .article-description {
             font-size: 0.9rem;
+            color: #666;
         }
 
         /* フッター */
@@ -443,13 +449,7 @@
         <div class="featured-article">
             <div class="title">新しい記事</div>
         </div>
-        <h1><center>新しい記事</center></h1>
     </div>
-        <div class="main-content">
-            <h1><center>ナマイキデザインへようこそ</center></h1>
-            <div class="featured-article">
-                <div class="title">新しい記事</div>
-            </div>
             <div class="article-container">
                 <a href="#" class="article-box">
                     <img src="適当画像 2025 01 24.png" alt="最近の記事">
