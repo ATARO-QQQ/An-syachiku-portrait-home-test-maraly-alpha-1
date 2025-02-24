@@ -340,6 +340,83 @@
     margin-bottom: 8px;
 }
 
+
+                /* 「過去の記事はこちらから」のボックス */
+        .past-article-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background: linear-gradient(45deg, #83ccd2, #180614);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        /* カーソルを重ねた時 */
+        .past-article-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #180614, #83ccd2);
+        }
+
+        /* アスペクト比調整 */
+        .past-article-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .past-article-box {
+            flex-basis: 100%;
+            aspect-ratio: 8 / 1; /* 横長のデザイン */
+        }
+
+        @media (min-width: 1200px) {
+            .past-article-box {
+                aspect-ratio: 8 / 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .past-article-box {
+                aspect-ratio: 4 / 1;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .past-article-box {
+                aspect-ratio: 3 / 1;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ボックスのデザイン調整 */
+        .article-container {
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        @media (min-width: 769px) {
+            .article-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* フッター */
         footer {
             background-color: #180614;
@@ -488,6 +565,11 @@
                 </a>
             </div>
         </div>
+        <div class="past-article-container">
+        <div class="past-article-box">
+            過去の記事はこちらから
+        </div>
+    </div>
 </main>
 
 <footer>
