@@ -341,7 +341,6 @@
 }
 
 
-                /* 「過去の記事はこちらから」のボックス */
         .past-article-box {
             display: flex;
             justify-content: center;
@@ -357,13 +356,19 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             text-transform: uppercase;
+            transform: translateY(0); /* 初期位置 */
         }
 
-        /* カーソルを重ねた時 */
+        /* カーソルを重ねたとき */
         .past-article-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px); /* 上に浮かせる */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 影を強調 */
+        }
+
+        /* 背景色の反転を滑らかにする */
+        .past-article-box:hover {
             background: linear-gradient(45deg, #180614, #83ccd2);
+            transition: background 0.5s ease; /* 背景の反転を滑らかに */
         }
 
         /* アスペクト比調整 */
